@@ -1,10 +1,19 @@
 import React from 'react';
+import styled from 'styled-components';
+
+
+const Title = styled.h1`
+  font-size: 2em;
+  text-align: center;
+  color: black;
+  border: 5px solid DarkOrange;
+`;
 
 function Header(props) {
   return (   
-     <h1>
+     <Title>
           {props.title}
-     </h1>
+     </Title>
   );
 };
 export default Header;
