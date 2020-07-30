@@ -3,10 +3,12 @@ import styled from 'styled-components';
 
 
 const Title = styled.h1`
+  color:white;
   font-size: 2em;
   text-align: center;
-  color: black;
-  border: 5px solid DarkOrange;
+  margin: 0px auto;
+  // border: 5px solid DarkOrange;
+  background-color: black;
 `;
 
 function Header(props) {

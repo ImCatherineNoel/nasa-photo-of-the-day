@@ -5,32 +5,46 @@ import React from 'react';
 import styled from 'styled-components';
 
 
-const TEST = styled.div`
-border: 5px solid Aquamarine;
+const INFOTEXT = styled.div`
+// border: 5px solid Aquamarine;
+display:flex;
+flex-direction: column;
+padding: 1rem;
 `;
-const TEST2 = styled.div`
-border: 5px solid DarkMagenta;
+const MIDWRAP = styled.div`
+// border: 0px solid Purple;
+display:flex;
+flex-direction: row;
 `;
-
-const TEST3 = styled.img`
-  border: 3px solid green;
+const FONT = styled.p`
+font-size: 0.8rem;
+`;
+const DATE = styled.p`
+padding-top: .25rem;
+font-size: 0.5rem;
+`;
+const COPY = styled.p`
+font-size: 0.4rem;
+`;
+const IMG = styled.img`
+// border: 3px solid green;
+  width: 300px;
+  padding: 1rem;
 `;
 
 function Main(props) {
   if (!props.url) return <h3>Loading...</h3>;
   return (   
-  <>
+  <MIDWRAP>
   <div>
-    <TEST3 src={props.url} alt={props.title}/>      
+    <IMG src={props.url} alt={props.title}/>      
   </div>     
-        <TEST>
-        <div>Date: {props.date}</div>  
-        <span>Photo Copyright: {props.copyright}</span> 
-        </TEST>
-        <TEST2>
-          <p>{props.explanation}</p>
-        </TEST2>
-  </>
+        <INFOTEXT>
+        <DATE>Date: {props.date}</DATE>  
+        <COPY>Photo Copyright: {props.copyright}</COPY> 
+          <FONT>{props.explanation}</FONT>
+        </INFOTEXT>
+  </MIDWRAP>
   );
 };
 export default Main;

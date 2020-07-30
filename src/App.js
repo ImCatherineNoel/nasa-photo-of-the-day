@@ -7,7 +7,13 @@ import Footer from './Comps/footer.js'
 import styled from 'styled-components';
 
 const Wrapper = styled.div`
-    border: 5px solid red;
+    // border: 5px solid red;
+    max-width: 800px;
+    margin: 0px auto;
+    background-color:AntiqueWhite; 
+    padding: 0;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;   
 `;
 
 
